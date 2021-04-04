@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="fanSpeed1Color">#FFEB3B</color>
+    <color name="fanSpeed2Color">#CDDC39</color>
+    <color name="fanSpeed3Color">#009688</color>
 </resources>
