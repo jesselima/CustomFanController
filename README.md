@@ -1,9 +1,9 @@
-### Custom View Components
+## Custom View Components
 
+[How Android Draws Views](https://developer.android.com/guide/topics/ui/how-android-draws.html)
 [Creating Custom Views](https://developer.android.com/training/custom-views/index.html)
 [@JvmOverloads](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html)
 [Custom Components](https://developer.android.com/guide/topics/ui/custom-components.html#compound)
-[How Android Draws Views](https://developer.android.com/guide/topics/ui/how-android-draws.html)
 [onMeasure()](https://developer.android.com/reference/android/view/View.html#onMeasure%28int,%20int%29)
 [onSizeChanged()](https://developer.android.com/reference/android/view/View.html#onSizeChanged%28int,%20int,%20int,%20int%29)
 [onDraw()](https://developer.android.com/reference/android/view/View.html#onDraw%28android.graphics.Canvas%29)
@@ -15,20 +15,17 @@
 [drawRect()](https://developer.android.com/reference/android/graphics/Canvas.html#drawRect%28android.graphics.Rect,%20android.graphics.Paint%29)
 [drawOval()](https://developer.android.com/reference/android/graphics/Canvas.html#drawOval%28android.graphics.RectF,%20android.graphics.Paint%29)
 [drawArc()](https://developer.android.com/reference/android/graphics/Canvas.html#drawArc%28android.graphics.RectF,%20float,%20float,%20boolean,%20android.graphics.Paint%29)
-
-
 [drawBitmap()](https://developer.android.com/reference/android/graphics/Canvas.html#drawBitmap%28android.graphics.Bitmap,%20android.graphics.Matrix,%20android.graphics.Paint%29)
 [setStyle()](https://developer.android.com/reference/android/graphics/Paint.html#setStyle%28android.graphics.Paint.Style%29)
 [invalidate()](https://developer.android.com/reference/android/view/View.html#invalidate%28%29)
-When invalidate is 
-
 [View](https://developer.android.com/reference/android/view/View.html)
 [PointF](https://developer.android.com/reference/android/graphics/PointF)
 [drawCircle()](https://developer.android.com/reference/android/graphics/Canvas.html#drawCircle%28float,%20float,%20float,%20android.graphics.Paint%29)
 [drawText()](https://developer.android.com/reference/android/graphics/Canvas.html#drawText%28java.lang.String,%20int,%20int,%20float,%20float,%20android.graphics.Paint%29)
 
 
-##### CustomView interactions methods
+### CustomView interactions methods
+
 [isClickable](https://developer.android.com/reference/android/view/View.html#isClickable%28%29)
 Enables the custom view to respond to clicks
 
@@ -44,7 +41,15 @@ developers that might use your CustomView.
 [invalidate()](https://developer.android.com/reference/android/view/View.html#invalidate%28%29)
 Instruct the Android System to call the onDraw method to redraw the view.
 
-
-
 [OnClickListener()](https://developer.android.com/reference/android/view/View.OnClickListener.html)
 Used to perform an action when the user clicks the view
+
+##### Additional Resources
+[android-ktx](https://android.github.io/android-ktx/core-ktx/index.html)
+[withStyledAttributes](https://android.github.io/android-ktx/core-ktx/androidx.content/android.content.-context/index.html)
+[Android ktx Documentation](https://developer.android.com/kotlin/ktx)
+[Original Announcement blog post](https://android-developers.googleblog.com/2018/02/introducing-android-ktx-even-sweeter.html)
+[Input Events](https://developer.android.com/guide/topics/ui/ui-events.html)
+[Quick Intro to Creating a Custom View in Android](https://youtu.be/ktbYUrlN_Ws)
+[Android Custom View Tutorial](https://youtu.be/sb9OEl4k9Dk)
+
