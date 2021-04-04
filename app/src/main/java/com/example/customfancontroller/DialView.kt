@@ -105,6 +105,36 @@ class DialView @JvmOverloads constructor(
 		val angle = startAngle + position.ordinal * (Math.PI / 4)
 		x = (radius * cos(angle)).toFloat() + width / 2
 		y = (radius * sin(angle)).toFloat() + height / 2
+	}
 
+	/**
+	 * The performClick() method calls onClickListener(). If you override performClick(), another
+	 * contributor can still override onClickListener(). For example, if you create a custom view
+	 * and make it available through a library for use or subclassing, its user can add their own
+	 * click handling through onClickListener().
+	 */
+
+	/**
+	 * To enable the CustomView to be Clickable:
+	 *	- Set isClackBale to true.
+	 *	- Implement performClick().
+	 *	- Call invalidate()	to trigger reDraw.
+	 */
+
+	init {
+		isClickable = true
+	}
+
+	override fun performClick(): Boolean {
+		/**
+		 * The call to super.performClick() must happen first. WIch enables accessibility events
+		 * as well as calls to OnClickListener.
+		 */
+		if(super.performClick()) return true
+
+		fanSpeed = fanSpeed.next()
+		contentDescription = resources.getString(fanSpeed.label)
+		invalidate()
+		return true
 	}
 }
