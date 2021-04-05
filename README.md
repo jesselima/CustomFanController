@@ -53,3 +53,20 @@ Used to perform an action when the user clicks the view
 [Quick Intro to Creating a Custom View in Android](https://youtu.be/ktbYUrlN_Ws)
 [Android Custom View Tutorial](https://youtu.be/sb9OEl4k9Dk)
 
+
+## Drawing on Canvas Object
+
+[Drawables](https://developer.android.com/guide/topics/graphics/drawables)
+[Canvas](https://developer.android.com/reference/android/graphics/Canvas.html)
+[View class](https://developer.android.com/reference/android/view/View.html)
+
+[onDraw()](https://developer.android.com/reference/android/view/View.html#onDraw%28android.graphics.Canvas%29)
+
+
+[Paint](https://developer.android.com/reference/android/graphics/Paint)
+[Path](https://developer.android.com/reference/kotlin/android/graphics/Path.html)
+[Paint.Style](https://developer.android.com/reference/android/graphics/Paint.Style.html)
+[Paint.Join](https://developer.android.com/reference/android/graphics/Paint.Join.html)
+[Paint.Cap](https://developer.android.com/reference/android/graphics/Paint.Cap.html)
+
+
