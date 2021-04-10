@@ -69,4 +69,6 @@ Used to perform an action when the user clicks the view
 [Paint.Join](https://developer.android.com/reference/android/graphics/Paint.Join.html)
 [Paint.Cap](https://developer.android.com/reference/android/graphics/Paint.Cap.html)
 
-
+[MotionEvent](https://developer.android.com/reference/kotlin/android/view/MotionEvent.html)
+[ViewConfiguration.get(context).scaledTouchSlop](https://developer.android.com/reference/kotlin/android/view/ViewConfiguration.html#getScaledTouchSlop%28%29)
+[Bezier Curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)
