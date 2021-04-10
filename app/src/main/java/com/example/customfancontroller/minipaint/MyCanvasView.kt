@@ -6,6 +6,7 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Path
+import android.graphics.Rect
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
@@ -32,6 +33,8 @@ class MyCanvasView(context: Context) : View(context) {
 
 	private val backgroundColor = ResourcesCompat.getColor(resources, R.color.colorBackground, null)
 	private val drawColor = ResourcesCompat.getColor(resources, R.color.colorPaint, null)
+
+	private lateinit var frame: Rect
 
 	// scaledTouchSlop: Distance in pixels a touch can wander before we think the user is scrolling
 	private val touchTolerance = ViewConfiguration.get(context).scaledTouchSlop
@@ -73,11 +76,26 @@ class MyCanvasView(context: Context) : View(context) {
 		cacheBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
 		cacheCanvas = Canvas(cacheBitmap)
 		cacheCanvas.drawColor(backgroundColor)
+
+		val inset = 40
+		/**
+		 * Create a new rectangle with the specified coordinates. Note: no range
+		 * checking is performed, so the caller must ensure that left <= right and
+		 * top <= bottom.
+		 *
+		 * @param left   The X coordinate of the left side of the rectangle
+		 * @param top    The Y coordinate of the top of the rectangle
+		 * @param right  The X coordinate of the right side of the rectangle
+		 * @param bottom The Y coordinate of the bottom of the rectangle
+		 */
+		frame = Rect(inset, inset, width - inset, height - inset)
 	}
 
 	override fun onDraw(canvas: Canvas) {
 		super.onDraw(canvas)
 		canvas.drawBitmap(cacheBitmap, 0f, 0f, null)
+		// Info - Draw the frame on the canvas
+		canvas.drawRect(frame, paint)
 	}
 
 	@SuppressLint("ClickableViewAccessibility")
